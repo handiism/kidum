@@ -11,6 +11,11 @@ tasks:
       - go run cmd/main.go
     silent: true
 
+  setup:
+    cmds:
+      - go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+      - go install github.com/cosmtrek/air@latest
+
   dev:
     cmds:
       - air

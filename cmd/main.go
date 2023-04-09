@@ -4,12 +4,16 @@ import (
 	"log"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/handiism/kidum/bootstrap"
 )
 
 func main() {
-	app := fiber.New()
+	app := bootstrap.App()
+	defer app.Close()
 
-	if err := app.Listen(":8080"); err != nil {
+	fiber := fiber.New()
+
+	if err := fiber.Listen(app.Env.ServerAddress); err != nil {
 		log.Fatal(err.Error())
 	}
 }

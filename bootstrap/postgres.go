@@ -11,11 +11,11 @@ func NewPgPool(env *Env) *pgxpool.Pool {
 	ctx := context.Background()
 	pool, err := pgxpool.New(ctx, env.PostgresURL)
 	if err != nil {
-		log.Fatal("Can't create postgres pool: ", err)
+		log.Fatal(err)
 	}
 
 	if _, err := pool.Acquire(ctx); err != nil {
-		log.Fatal("Can't acquire postgres connection: ", err)
+		log.Fatal(err)
 	}
 
 	return pool

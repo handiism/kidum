@@ -1,27 +1,27 @@
-drop table if exists "Form";
+DROP TABLE IF EXISTS "Form";
 
-drop table if exists "Contact";
+DROP TABLE IF EXISTS "Contact";
 
-drop table if exists "Admin";
+DROP TABLE IF EXISTS "Admin";
 
-drop table if exists "Route";
+DROP TABLE IF EXISTS "Route";
 
-drop table if exists "DestinationRoute";
+DROP TABLE IF EXISTS "DestinationRoute";
 
-drop table if exists "Route";
+DROP TABLE IF EXISTS "Route";
 
-drop table if exists "Destination";
+DROP TABLE IF EXISTS "Destination";
 
-drop table if exists "User";
+DROP TABLE IF EXISTS "User";
 
-drop table if exists "Credential";
+DROP TABLE IF EXISTS "Credential";
 
-drop type if exists "FormType";
+DROP TYPE IF EXISTS "FormType";
 
-drop type if exists "Gender";
+DROP TYPE IF EXISTS "Gender";
 
-drop type if exists "Role";
+DROP TYPE IF EXISTS "Role";
 
-drop type if exists "CredentialType";
+DROP TYPE IF EXISTS "CredentialType";
 
-drop type if exists "FormStatus";
+DROP TYPE IF EXISTS "FormStatus";

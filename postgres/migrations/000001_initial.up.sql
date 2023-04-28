@@ -15,7 +15,7 @@ CREATE TYPE "FormStatus" AS enum (
 
 CREATE TABLE IF NOT EXISTS "Form" (
     "id" SERIAL PRIMARY KEY,
-    "code" VARCHAR(8) UNIQUE,
+    "code" VARCHAR(8) UNIQUE NOT NULL,
     "agreement" BOOLEAN DEFAULT FALSE NOT NULL,
     "ticket" TEXT,
     "description" TEXT,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS "Admin" (
 
 CREATE TABLE IF NOT EXISTS "DestinationRoute" (
     "id" SERIAL PRIMARY KEY,
-    "order" INTEGER NOT NULL,
+    "order" INTEGER,
     -- 
     "routeId" INTEGER,
     "destinationId" INTEGER
@@ -62,9 +62,9 @@ CREATE TABLE IF NOT EXISTS "Destination" (
 
 CREATE TABLE IF NOT EXISTS "Contact" (
     "id" SERIAL PRIMARY KEY,
-    "number" VARCHAR(63),
-    "emergencyNumber" VARCHAR(63),
-    "email" VARCHAR(63)
+    "phoneNumber" VARCHAR(63) NOT NULL,
+    "emergencyPhoneNumber" VARCHAR(63) NOT NULL,
+    "email" VARCHAR(63) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "User" (
